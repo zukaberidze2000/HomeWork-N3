@@ -1,0 +1,57 @@
+package com.company;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Student> N1 = new ArrayList<>();
+
+        Student zuka = new Student();
+        zuka.setName("zuka");
+        zuka.setSurname("beridze");
+
+        Student xatia = new Student();
+        xatia.setName("xatia");
+        xatia.setSurname("gafrindashvili");
+
+        N1.add(zuka);
+        N1.add(xatia);
+
+        List<Student> N2 = new ArrayList<>();
+
+        Student gio = new Student();
+        gio.setName("gio");
+        gio.setSurname("meqeladze");
+
+        N2.add(gio);
+
+        List<Student> N3 = new ArrayList<>();
+
+        N3.addAll(N1);
+
+        for (Student A : N2) {
+            if (!function(N3, A))
+                N3.add(A);
+        }
+
+        for (Student a : N3)
+            System.out.println(a);
+
+    }
+
+    private static boolean function(List<Student> n3, Student a) {
+        boolean func = false;
+        for (Student a : N3) {
+            if (a.getName().equals(N3.getName()) && a.getSurname().equals(N3.getSurname())) {
+                func = true;
+                break;
+            }
+        }
+        return func;
+
+    }
+}
+
+
+
