@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashMap;
+;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> N1 = new ArrayList<>();
+        N1.add(1);
+        N1.add(2);
+        N1.add(3);
+
+        List<String> N2 = new ArrayList<>();
+        N2.add("zuka");
+        N2.add("xatia");
+        N2.add("gio");
+
+        HashMap<Integer, String> N3 = new HashMap<>();
+        for (int i = 0; i < N1.size(); i++) {
+            N3.put(N1.get(i), N2.get(i));
+        }
+
+        for (int i = 1; i < N3.size()+1 ; i++) {
+            System.out.println(N3.get(i));
+        }
+
+    }
+}
